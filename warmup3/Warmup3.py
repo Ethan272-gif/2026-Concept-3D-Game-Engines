@@ -40,11 +40,12 @@ class MyApp(ShowBase):
             CollisionSphere(
             0,0,0,1.8)
             )
+        self.parentCnode.setPos(100, 100, 100)
         self.traverser=CollisionTraverser()
         self.pusher=CollisionHandlerPusher()
         self.traverser.showCollisions(self.render)
         self.parent.reparentTo(self.render)
-        self.parentCnode.show()
+        #self.parentCnode.show()
         
         #fighterCnode
         self.fighterCnode=self.fighter.attachNewNode(CollisionNode('fcnode'))
