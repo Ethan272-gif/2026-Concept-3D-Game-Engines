@@ -66,12 +66,12 @@ class SpaceJam(ShowBase):
             self.loader, "./assets/DroneDefender/DroneDefender.obj",self.render,droneName,"./assets/DroneDefender/octotoad1_auv.png", position,10)
     def DrawZPlainDefense(self, centralObject, droneName, step, totalSteps, radius=1):
         unitVec=defensePaths.z_plain(step, totalSteps)
+        unitVec.normalize()
         position=unitVec*radius*300+centralObject.modelNode.getPos()
         SpaceClass.Drone(
             self.loader, "./assets/DroneDefender/DroneDefender.obj",self.render,droneName,"./assets/DroneDefender/octotoad1_auv.png", position,10)
         
-        unitVec.normalize()
-        position=unitVec*radius*300+centralObject.modelNode.getPos()
+        
 
     def quit(self):
         sys.exit()
