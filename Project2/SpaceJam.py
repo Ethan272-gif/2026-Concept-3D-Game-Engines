@@ -27,7 +27,6 @@ class SpaceJam(ShowBase):
         self.Planet6=SpaceClass.Planet(
             self.loader,"./assets/Planets/protoPlanet.x",self.render,'Planet6',"./assets/Planets/Planet6/maps/Hole_planet.tif",(0,2000,300),100)#Texture by Amy Ip# type: ignore
 
-
         fullCycle=60
         for j in range(fullCycle):
             SpaceClass.Drone.droneCount+=1

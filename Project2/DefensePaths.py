@@ -29,19 +29,19 @@ def BaseballSeams(step,numSeams,B,F=1):
 
 def x_plain(step,totalSteps):
     theta=step/float(totalSteps)*2*math.pi
-    x=math.cos(theta)
-    y=0.0
-    z=math.sin(theta)
+    x=50.0*math.cos(theta)
+    y=100.0*math.sin(theta)
+    z=0.0*math.tan(theta)
     return Vec3(x,y,z)
 def y_plain(step,totalSteps):
     theta=step/float(totalSteps)*2*math.pi
     x=0.0
-    y=math.cos(theta)
-    z=math.sin(theta)
+    y=100.0*math.cos(theta)
+    z=50.0*math.sin(theta)
     return Vec3(x,y,z)
 def z_plain(step,totalSteps):
     theta=step/float(totalSteps)*2*math.pi
-    x=math.cos(theta)
-    y=math.sin(theta)
-    z=0.0
+    x=100.0*math.cos(theta)
+    y=100.0*math.sin(theta)
+    z=5.0*theta
     return Vec3(x,y,z)
